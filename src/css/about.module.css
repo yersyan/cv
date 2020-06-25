@@ -1,0 +1,125 @@
+.aboutBlock{
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+
+}
+.aboutText{
+    width: 90%;
+}
+.infoList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.infoList ul li {
+    margin-bottom: 10px;
+}
+
+.infoList .title {
+    color: #04b4e0;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+
+.blockTitle {
+    display: inline-block;
+    position: relative;
+    padding-right: 12px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.blockTitle h3 {
+    position: relative;
+    font-size: 21px;
+    z-index: 1;
+}
+
+.blockTitle h3 span {
+    color: #04b4e0;
+}
+
+.blockTitle:after {
+    position: absolute;
+    opacity: 0.45;
+    top: 10px;
+    right: 0;
+    content: '';
+    height: 20px;
+    width: 30px;
+    background-image: -webkit-repeating-radial-gradient(center center, #04b4e0, #04b4e0 1px, transparent 0px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, #04b4e0, #04b4e0 1px, transparent 0px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, #04b4e0, #04b4e0 1px, transparent 0px, transparent 100%);
+    -webkit-background-size: 6px 6px;
+    -moz-background-size: 6px 6px;
+    background-size: 6px 6px;
+    z-index: 0;
+}
+
+
+.infoBlockWIconContent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.infoBlockWIcon {
+    margin-bottom: 25px;
+}
+
+.infoBlockWIcon .ciText h4 {
+    margin: 5px 0;
+}
+
+.infoBlockWIcon .ciText p {
+    font-size: .95em;
+}
+
+.infoBlockWIcon .ciIcon {
+    display: table-cell;
+    width: 54px;
+    padding-right: 25px;
+}
+
+.infoBlockWIcon .icon {
+    position: relative;
+    font-size: 42px;
+    color: #04b4e0;
+    opacity: .7;
+}
+
+.animatedSections {
+    position: relative;
+    height: 100%;
+    -webkit-perspective: 1500px;
+    -moz-perspective: 1500px;
+    perspective: 1500px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.animatedSection {
+    position: absolute;
+    background-color: #222;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    padding: 60px;
+    /*opacity: 0;*/
+    overflow: auto;
+    /*visibility: hidden;*/
+    /*-webkit-backface-visibility: hidden;*/
+    /*-moz-backface-visibility: hidden;*/
+    /*backface-visibility: hidden;*/
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+
+

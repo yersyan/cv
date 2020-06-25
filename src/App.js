@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter} from "react-router-dom";
+import {Header} from "./components/header";
+import bgImage from "./img/main_bg.png";
+import {ArrowNav, Titles} from "./components/components";
+import {Home} from "./components/home";
+import {Route, Switch} from "react-router";
+import {About} from "./components/about";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const backgroundImage = `url(${bgImage})`
+
+    return (
+        <BrowserRouter>
+            <div className="lmAnimatedBg" style={{backgroundImage}}/>
+            <div className="page">
+                <div className="pageContent">
+                    <Header/>
+                    <ArrowNav/>
+                    <div className="contentArea">
+                        <div className="animatedSections">
+                            <Switch>
+                                <Route path="/home" render={() => <Home/>}/>
+                                <Route path="/about" render={() => <About/>}/>
+                            </Switch>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;
