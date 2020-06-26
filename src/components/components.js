@@ -16,12 +16,18 @@ export const Titles = ({title, description}) => {
     </div>
 }
 
-export const PageTitle = () => {
+export const PageTitle = ({title, span}) => {
     return <div className={style.pageTitle}>
-        <h2>About <span>Me</span></h2>
+        <h2>{title} <span>{span}</span></h2>
     </div>
 }
 
 export const WhiteSpace = ({size}) => {
     return <div style={{paddingBottom: size}}/>
+}
+
+export const BlockTitle = ({title, span}) => {
+    return <div className={style.blockTitle}>
+        <h3>{title} <span>{span}</span></h3>
+    </div>
 }

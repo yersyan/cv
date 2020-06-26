@@ -1,5 +1,5 @@
 import React from "react";
-import {PageTitle, WhiteSpace} from "./components";
+import {BlockTitle, PageTitle, WhiteSpace} from "./components";
 import style from "../css/about.module.css";
 import {FaStore, GoPencil, GrFlagFill, TiDeviceLaptop} from "react-icons/all";
 import {Testimonials} from "./testimonials/testimonials";
@@ -9,7 +9,7 @@ import {FunFacts} from "./funFacts/funFacts";
 
 export const About = () => {
     return <section data-id="about-me" className={style.animatedSection}>
-        <PageTitle/>
+        <PageTitle title={"About"} span={"Me"}/>
 
         <div className={style.sectionContent}>
 
@@ -57,9 +57,7 @@ export const About = () => {
             <WhiteSpace size={"50px"}/>
 
 
-            <div className={style.blockTitle}>
-                <h3>What <span>I Do</span></h3>
-            </div>
+            <BlockTitle title={"What"} span={"I Do"}/>
 
             <div className={style.infoBlockWIconContent}>
                 <div className={style.infoBlockWIcon}>
@@ -111,9 +109,7 @@ export const About = () => {
             <WhiteSpace size={"30px"}/>
 
 
-            <div className={style.blockTitle}>
-                <h3>Testimonials</h3>
-            </div>
+           <BlockTitle title={"Testimonials"}/>
 
 
             <Testimonials/>
@@ -122,17 +118,13 @@ export const About = () => {
             <WhiteSpace size={"50px"}/>
 
 
-            <div className={style.blockTitle}>
-                <h3>Cilents</h3>
-            </div>
+            <BlockTitle title={"Clients"}/>
 
             <Clients/>
             <WhiteSpace size={"50px"}/>
 
 
-            <div className={style.blockTitle}>
-                <h3>Pricing</h3>
-            </div>
+            <BlockTitle title={"Pricing"}/>
 
 
             <PricingBlock/>
@@ -141,9 +133,7 @@ export const About = () => {
             <WhiteSpace size={"50px"}/>
 
 
-            <div className={style.blockTitle}>
-                <h3>Fun <span>Facts</span></h3>
-            </div>
+            <BlockTitle title={"Fun"} span={"Facts"}/>
 
 
             <FunFacts/>
